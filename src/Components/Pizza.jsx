@@ -1,9 +1,12 @@
-export default function Pizza() {
+export default function Pizza({ name, ingredients, photoName, price }) {
   return (
-    <div>
-      <img src="pizzas/spinaci.jpg" alt="Pizza Spinaci" />
-      <h2>Pizza Spinaci</h2>
-      <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+    <div className="pizza">
+      <img src={photoName} alt={name} />
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <span>{price}</span>
+      </div>
     </div>
   );
 }
