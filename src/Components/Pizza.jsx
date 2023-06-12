@@ -1,12 +1,14 @@
-export default function Pizza({ name, ingredients, photoName, price }) {
+export default function Pizza({ pizzaObj }) {
+  const { name, photoName, ingredients, price } = pizzaObj;
+
   return (
-    <div className="pizza">
+    <li className="pizza">
       <img src={photoName} alt={name} />
       <div>
         <h3>{name}</h3>
         <p>{ingredients}</p>
         <span>{price}</span>
       </div>
-    </div>
+    </li>
   );
 }
